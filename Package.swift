@@ -5,8 +5,11 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftUICentered",
+    platforms: [
+        .iOS(.v15),
+        .macOS(.v12)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SwiftUICentered",
             targets: ["SwiftUICentered"]),
@@ -16,8 +19,5 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "SwiftUICentered"),
-        .testTarget(
-            name: "SwiftUICenteredTests",
-            dependencies: ["SwiftUICentered"]),
     ]
 )
